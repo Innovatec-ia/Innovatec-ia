@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Innovatec IA | Agencia de Inteligencia Artificial</title>
+  <meta name="description" content="Innovatec IA: Soluciones de inteligencia artificial para potenciar el rendimiento de tu empresa.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+  <header>
+    <img src="img/logo.png" alt="Logo Innovatec IA" class="logo">
+    <h1>Innovatec IA</h1>
+    <p>Transformamos tu empresa con inteligencia artificial</p>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Sobre Nosotros</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#casos">Casos de Éxito</a>
+    <a href="#blog">Blog</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenido a Innovatec IA</h2>
+    <p>
+      Somos una agencia especializada en soluciones de inteligencia artificial para empresas. Ayudamos a optimizar procesos, mejorar la toma de decisiones y potenciar el crecimiento de tu negocio a través de la tecnología más avanzada.
+    </p>
+    <div class="cta">
+      <a href="#contacto">Solicita una consultoría gratuita</a>
+    </div>
+  </section>
+
+  <section id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En Innovatec IA, creemos en el poder de la inteligencia artificial para transformar organizaciones. Nuestro equipo está formado por expertos en IA, ciencia de datos y desarrollo de software, comprometidos con la innovación y la excelencia.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <img src="img/servicio_automatizacion.png" alt="Automatización con IA">
+        <h3>Automatización con IA</h3>
+        <p>Optimizamos y automatizamos procesos empresariales para reducir costes y aumentar la eficiencia operativa.</p>
+      </div>
+      <div class="servicio">
+        <img src="img/servicio_analitica.png" alt="Analítica Predictiva">
+        <h3>Analítica Predictiva</h3>
+        <p>Utilizamos modelos de IA para anticipar tendencias, identificar oportunidades y minimizar riesgos.</p>
+      </div>
+      <div class="servicio">
+        <img src="img/servicio_desarrollo.png" alt="Desarrollo de IA a Medida">
+        <h3>Desarrollo de IA a Medida</h3>
+        <p>Diseñamos e implementamos soluciones de inteligencia artificial adaptadas a las necesidades de tu empresa.</p>
+      </div>
+      <div class="servicio">
+        <img src="img/servicio_consultoria.png" alt="Consultoría en IA">
+        <h3>Consultoría en IA</h3>
+        <p>Te asesoramos en la definición de estrategias y la integración de IA en tu negocio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="casos">
+    <h2>Casos de Éxito</h2>
+    <div class="casos">
+      <div class="caso">
+        <h3>Retail: Optimización de Inventario</h3>
+        <p>Implementamos un sistema de predicción de demanda que redujo el stock innecesario en un 30%.</p>
+      </div>
+      <div class="caso">
+        <h3>Finanzas: Detección de Fraude</h3>
+        <p>Desarrollamos un modelo de IA que detecta transacciones sospechosas en tiempo real, mejorando la seguridad.</p>
+      </div>
+      <div class="caso">
+        <h3>Salud: Diagnóstico Asistido</h3>
+        <p>Colaboramos con clínicas para crear sistemas de apoyo al diagnóstico médico, acelerando la atención al paciente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog & Recursos</h2>
+    <div class="blog-entradas">
+      <div class="blog-entrada">
+        <h3>¿Por qué tu empresa necesita IA?</h3>
+        <p>Descubre los beneficios de la inteligencia artificial y cómo puede transformar tu negocio.</p>
+        <a href="#">Leer más</a>
+      </div>
+      <div class="blog-entrada">
+        <h3>5 tendencias de IA en 2025</h3>
+        <p>Analizamos las tendencias que marcarán el futuro de la inteligencia artificial en el mundo empresarial.</p>
+        <a href="#">Leer más</a>
+      </div>
+      <div class="blog-entrada">
+        <h3>Guía: Primeros pasos con IA</h3>
+        <p>Una guía práctica para comenzar a implementar soluciones de IA en tu empresa.</p>
+        <a href="#">Leer más</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Listo para llevar tu empresa al siguiente nivel? Escríbenos y te responderemos en menos de 24 horas.</p>
+    <form id="form-contacto" name="contacto" netlify>
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" rows="4" placeholder="¿En qué podemos ayudarte?" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <div id="mensaje-exito" style="display:none; color:green; margin-top:15px;">
+      ¡Gracias por contactarnos! Te responderemos pronto.
+    </div>
+    <div style="margin-top:20px;">
+      <strong>Email:</strong> contacto@innovatecia.com<br>
+      <strong>Teléfono:</strong> +34 600 123 456<br>
+      <strong>Dirección:</strong> Calle Innovación 123, Madrid, España
+    </div>
+    <div style="margin-top:15px;">
+      <a href="#" style="color:#00bcd4; margin-right:10px;">LinkedIn</a>
+      <a href="#" style="color:#00bcd4; margin-right:10px;">Twitter</a>
+      <a href="#" style="color:#00bcd4;">Instagram</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Innovatec IA. Todos los derechos reservados.
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div id="chatbot-widget">
+    <div id="chatbot-header" onclick="toggleChatbot()">
+      <span>🤖 Chat Innovatec</span>
+      <span id="chatbot-toggle">▲</span>
+    </div>
+    <div id="chatbot-body">
+      <div id="chatbot-messages">
+        <div class="bot-message">¡Hola! Soy el asistente virtual de Innovatec IA.<br>¿En qué puedo ayudarte?</div>
+      </div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Escribe tu mensaje..." autocomplete="off" required>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

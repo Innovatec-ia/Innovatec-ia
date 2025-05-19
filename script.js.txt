@@ -1,0 +1,84 @@
+// Formulario de contacto
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    document.getElementById('form-contacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('mensaje-exito').style.display = 'block';
+      this.reset();
+    });
+  }
+  // Scroll suave
+  document.querySelectorAll('nav a').forEach(enlace => {
+    enlace.addEventListener('click', function(e) {
+      const seccion = document.querySelector(this.getAttribute('href'));
+      if(seccion) {
+        e.preventDefault();
+        window.scrollTo({
+          top: seccion.offsetTop - 10,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+
+// Chatbot
+function toggleChatbot() {
+  const body = document.getElementById('chatbot-body');
+  const toggle = document.getElementById('chatbot-toggle');
+  if (body.style.display === 'none') {
+    body.style.display = 'block';
+    toggle.textContent = '▲';
+  } else {
+    body.style.display = 'none';
+    toggle.textContent = '▼';
+  }
+}
+
+document.getElementById('chatbot-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const input = document.getElementById('chatbot-input');
+  const msg = input.value.trim();
+  if (!msg) return;
+  addMessage(msg, 'user');
+  input.value = '';
+  setTimeout(() => {
+    addMessage(botReply(msg), 'bot');
+  }, 700);
+});
+
+function addMessage(text, sender) {
+  const messages = document.getElementById('chatbot-messages');
+  const div = document.createElement('div');
+  div.className = sender === 'bot' ? 'bot-message' : 'user-message';
+  div.innerHTML = text;
+  messages.appendChild(div);
+  messages.scrollTop = messages.scrollHeight;
+}
+
+// Respuestas automáticas básicas
+function botReply(msg) {
+  msg = msg.toLowerCase();
+  if (msg.includes('hola') || msg.includes('buenas')) {
+    return '¡Hola! ¿En qué puedo ayudarte hoy?';
+  }
+  if (msg.includes('servicio') || msg.includes('ofrecen')) {
+    return 'Ofrecemos automatización, analítica predictiva, desarrollo de IA a medida y consultoría. ¿Te gustaría saber más de alguno?';
+  }
+  if (msg.includes('contacto') || msg.includes('correo')) {
+    return 'Puedes escribirnos a <b>contacto@innovatecia.com</b> o usar el formulario de contacto.';
+  }
+  if (msg.includes('precio') || msg.includes('coste')) {
+    return 'Nuestros precios varían según el proyecto. ¿Quieres una cotización personalizada?';
+  }
+  if (msg.includes('adiós') || msg.includes('gracias')) {
+    return '¡Gracias por tu interés en Innovatec IA! Si tienes más preguntas, aquí estaré.';
+  }
+  return 'Soy un asistente virtual. Si tienes dudas sobre nuestros servicios, precios o contacto, ¡pregúntame!';
+}
+
+// Inicializa el chatbot cerrado en móviles
+if (window.innerWidth < 700) {
+  document.getElementById('chatbot-body').style.display = 'none';
+  document.getElementById('chatbot-toggle').textContent = '▼';
+}
